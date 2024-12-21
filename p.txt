@@ -1,0 +1,17 @@
+print("-----------------------Ecuaciones diferenciales homogeneas-------------------------------")
+#definiendo ecuacion homogenea dx=-7x^2y(x)+2x^2
+# definiendo la ecuación 
+print("Se busca la solucion a la siguiente ecuacion: ")
+eq = 2*x**2 - 7*x**2*(y(x))
+sympy.Eq(y(x).diff(x),eq)
+
+
+
+
+#  Condición inicial
+ics = {y(0): 0}
+
+# Resolviendo la ecuación
+edo_sol = sympy.dsolve(y(x).diff(x) - eq)
+print("La solucion  de la ecuacion diferencial dx=-7x^2y(x)+2x^2 es: ")
+edo_sol
